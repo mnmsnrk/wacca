@@ -1,0 +1,121 @@
+<div class= "main">
+
+  <div class="title">
+    <%# app/assets/images %>
+    <h1>新しい出会いが、あなたの世界を広げていく</h1>
+  
+    <div class = header_image>
+       <%=image_tag "top.png",class:"top-image"%>
+    </div>
+  </div>
+
+    <div class = "front">
+      <div class="wacca-detail">
+      <h1>WACCAは、スピーカーとオーディエンスを繋ぐ<br>マッチングプラットフォームです</h1>
+      </div>
+
+        <div class="front_line">
+          <div class = "card">
+            <p>プロフィール<p>
+              <%= image_tag "resume.png",class:"front_image"%>
+            <p class="card-summary">スピーカーは、幅広いジャンルでの講演経験を持っています。プロフィールを見ることで詳細を知ることができます。<p>
+          </div>
+          <div class = "card">
+            <p>スケジュール<p>
+              <%= image_tag "calendar.png",class:"front_image"%>
+            <p class="card-summary">講師のスケジュールがわかるの、事前に講演スケジュールの調整ができます。</p>
+          </div>
+          <div class = "card">
+            <p>連絡<p>
+              <%= image_tag "chat.png",class:"front_image"%>
+            <p class="card-summary">WACCAにはメッセージ機能を搭載しているため、連絡ツールの一本化ができます</p>
+          </div>
+          <div class = "card">
+            <p>決済<p>
+              <%= image_tag "online_payments.png",class:"front_image"%>
+              <p class="card-summary">オンライン決済が可能なため、講演後のやりとりもスムーズに</p>
+          </div>
+      </div>
+        <div class="fifth_contents">
+              <%= image_tag "conference_speaker_6nt7.png",class:"speech_image"%>
+        </div>
+    </div>
+    
+    <div class='resume-contents'>
+      <h2 class='title'>ピックアップスピーカー</h2>
+
+      <div class="resume">
+        <ul class='resume-lists'>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "sheep.png", class: 'icon-img'%>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "fox_gray.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "bambi.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "fox_brown.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "lion.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "hawk.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "deer.png", class: 'icon-img' %>
+            </div>
+          </li>
+          <li class="list">
+            <div class='resume-img-content'>
+              <%= image_tag "giraffe.png", class: 'icon-img' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="login">
+      <div class="login-form">
+          <ul class='lists-left'>
+            <h1>スピーカー（講師の方）</h1>
+            <li><%= link_to '新規登録', "#", class: "speech-signup" %></li>
+            <li><%= link_to 'ログイン', "#", class: "speech-login" %></li>
+          </ul>
+          <ul class='lists-right'>
+            <h1>講演をご依頼される方</h1>
+            <li><%= link_to '新規登録', "#", class: "client-signup" %></li>
+            <li><%= link_to 'ログイン', "#", class: "client-login" %></li>
+          </ul>
+      </div>
+       <%# <%= image_tag "undraw_neighbors_ciwb.svg", class: 'login-img' %> 
+    </div>
+
+    <div class="logo">
+      <%= image_tag "wacca.png", class: 'logo-img' %>
+    </div>
+</div>
+
+<div class='footer'>
+  <div class='footer-contents'>
+    <div class='furima-details'>
+       <%= link_to "What's WACCA", class: "footer-link" %>
+    </div>
+  </div>
+  <p>© WACCA</p>
+</div>
