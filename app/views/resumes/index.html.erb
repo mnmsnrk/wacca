@@ -1,8 +1,8 @@
-<div class= "main">
+<%= render "layouts/shared/header" %>
 
-  <div class="title">
-    <%# app/assets/images %>
-    <h1>新しい出会いが、あなたの世界を広げていく</h1>
+<div class= "main">
+  <div class="title_contents">
+    <h1 class="title">新しい出会いが、あなたの世界を広げていく</h1>
   
     <div class = header_image>
        <%=image_tag "top.png",class:"top-image"%>
@@ -11,7 +11,7 @@
 
     <div class = "front">
       <div class="wacca-detail">
-      <h1>WACCAは、スピーカーとオーディエンスを繋ぐ<br>マッチングプラットフォームです</h1>
+      <h1 class="title"> WACCAは、スピーカーとオーディエンスを繋ぐ<br>マッチングプラットフォームです</h1>
       </div>
 
         <div class="front_line">
@@ -42,7 +42,7 @@
     </div>
     
     <div class='resume-contents'>
-      <h2 class='title'>ピックアップスピーカー</h2>
+        <h1 class="title">ピックアップスピーカー<h1>
 
       <div class="resume">
         <ul class='resume-lists'>
@@ -93,16 +93,25 @@
     <div class="login">
       <div class="login-form">
           <ul class='lists-left'>
-            <h1>スピーカー（講師の方）</h1>
-            <li><%= link_to '新規登録', "#", class: "speech-signup" %></li>
-            <li><%= link_to 'ログイン', "#", class: "speech-login" %></li>
+            <h1 class="title">スピーカー（講師の方）</h1>
+            <% if speaker_signed_in? %>
+              <li><%= link_to 'ログアウト', destroy_speaker_session_path, method: :delete, class: "logout" %> </li> 
+            <% else %>
+              <li><%= link_to '新規登録',new_speaker_registration_path , class: "speech-signup" %></li>
+               <li><%= link_to 'ログイン', new_speaker_session_path,class: "speech-login" %></li>
+            <%end%>
           </ul>
           <ul class='lists-right'>
-            <h1>講演をご依頼される方</h1>
-            <li><%= link_to '新規登録', "#", class: "client-signup" %></li>
-            <li><%= link_to 'ログイン', "#", class: "client-login" %></li>
+            <h1 class="title">講演をご依頼される方</h1>
+            <% if requester_signed_in? %>
+              <li><%= link_to 'ログアウト',  destroy_requester_session_path, method: :delete, class: "logout" %> </li> 
+             <% else %>
+              <li><%= link_to '新規登録', new_requester_registration_path, class: "client-signup" %></li>
+              <li><%= link_to 'ログイン', new_requester_session_path, class: "client-login" %></li>
+             <%end%>
           </ul>
       </div>
+
        <%# <%= image_tag "undraw_neighbors_ciwb.svg", class: 'login-img' %> 
     </div>
 
