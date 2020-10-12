@@ -10,9 +10,9 @@ class Speakers::RegistrationsController < Devise::RegistrationsController
     end
 
   #  POST /resource
-  def create
-    super
-  end
+    def create
+      super
+    end
 
   # GET /resource/edit
   # def edit
@@ -20,9 +20,9 @@ class Speakers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  #  def update
+  #    super
+  #  end
 
   # DELETE /resource
   # def destroy
@@ -51,12 +51,12 @@ class Speakers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-      def after_sign_up_path_for(resource)
-        speakers_speaker_check_mail_path
-      end
+    #  def after_sign_up_path_for(resource)
+    #   new_speaker_confirmation_path
+    #  end
 
   # The path used after sign up for inactive accounts.
-  #  def after_inactive_sign_up_path_for(resource)
-  #   speakers_speaker_check_mail_path
-  #  end
+    def after_inactive_sign_up_path_for(resource)
+      resumes_speaker_check_mail_path
+    end
 end

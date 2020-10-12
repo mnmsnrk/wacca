@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   }
 
   root to: 'resumes#index'
-  get 'speakers/speaker_check_mail'
+  get 'resumes/speaker_check_mail'
 end
