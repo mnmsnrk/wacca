@@ -1,0 +1,25 @@
+<div class="sign_up_success">
+  <div class="welcome_message">
+    <h1>ようこそ、WAKKAへ！<br>あなたが仲間になってくれて、とても嬉しいです！</h1>
+    <%=image_tag "undraw_celebration_0jvk.png",class:"welcome-image"%>
+  </div>
+
+  <div class="sign_up_introduction">
+    <div class="first_introduction">
+      <h1>あなたのストーリーを知ってもらうために<br>プロフィールを作っていきましょう！</h1>
+      <%=image_tag "undraw_publish_post_vowb.png",class:"introduction-image"%>
+    </div>
+    <div class="second_introduction">
+      <h1>あなたへのメッセージや依頼内容は<br>マイページから確認できます</h1>
+      <%=image_tag "undraw_browsing_urt9.png",class:"introduction-image"%>
+    </div>
+    <div class="third_introduction">
+      <h1>さあ、あなただけのストーリーを始めましょう</h1>
+      <%=image_tag "undraw_fireworks_q5ji.png",class:"welcome-image"%>
+      <ul class="move_to">
+        <li><%= link_to 'トップページへ',root_path , class: "move" %></li>
+        <li><%= link_to 'マイページへ', "#",class: "move" %></li>
+      </ul>
+    </div>
+  </div>
+</div>
