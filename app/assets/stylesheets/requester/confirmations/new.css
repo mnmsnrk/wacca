@@ -1,0 +1,40 @@
+.requester_sign_up_success{
+  text-align: center;
+  padding-top:100px;
+}
+
+.requester_introduction-image{
+  width:50%;
+  height:50%;
+}
+
+.requester_welcome-image{
+  width:60%;
+  height:60%;
+}
+
+.requester_welcome-message{
+  padding-bottom:100px;
+}
+
+h1{
+  font-size:25px;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+.requester_welcome_message,.requester_first_introduction,.requester_second_introduction,.requester_third_introduction{
+  padding-bottom:100px;
+}
+
+.move_to{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top:30px;
+}
+
+.move_to li{
+  list-style: none;
+  font-size:25px;
+  text-decoration: none;
+}
