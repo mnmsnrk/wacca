@@ -92,7 +92,8 @@ img.speech_image{
 
 .icon-img {
   width:70%;
-  height:70%;
+  height: 200px;
+  object-fit: cover; 
 }
 
 .login{

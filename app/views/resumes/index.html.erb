@@ -46,6 +46,17 @@
 
       <div class="resume">
         <ul class='resume-lists'>
+
+        <% @resumes.each do |resume| %>
+          <li class='list'>
+            <div class='resume-img-content'>
+              <%= link_to resume_path(resume.id) do %>
+                 <%= image_tag(resume.image, class: 'icon-img')if resume.image.attached? %> 
+              <% end %>
+            </div>
+        <% end %>
+          </li>
+
           <li class="list">
             <div class='resume-img-content'>
               <%= image_tag "sheep.png", class: 'icon-img'%>
@@ -95,6 +106,7 @@
           <ul class='lists-left'>
             <h1 class="title">スピーカー（講師の方）</h1>
             <% if speaker_signed_in? %>
+              <li><%= link_to 'マイページ', speaker_accounts_show_path, class: "logout" %> </li> 
               <li><%= link_to 'ログアウト', destroy_speaker_session_path, method: :delete, class: "logout" %> </li> 
             <% else %>
               <li><%= link_to '新規登録',new_speaker_registration_path , class: "speech-signup" %></li>
