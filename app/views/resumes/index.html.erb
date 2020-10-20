@@ -106,7 +106,7 @@
           <ul class='lists-left'>
             <h1 class="title">スピーカー（講師の方）</h1>
             <% if speaker_signed_in? %>
-              <li><%= link_to 'マイページ', speaker_accounts_show_path, class: "logout" %> </li> 
+              <li><%= link_to 'マイページ', speaker_account_path(current_speaker.id), class: "logout" %> </li> 
               <li><%= link_to 'ログアウト', destroy_speaker_session_path, method: :delete, class: "logout" %> </li> 
             <% else %>
               <li><%= link_to '新規登録',new_speaker_registration_path , class: "speech-signup" %></li>
