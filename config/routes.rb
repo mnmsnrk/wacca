@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   devise_for :requesters,controllers:{
     sessions:      'requesters/sessions',
     passwords:     'requesters/passwords',
@@ -14,5 +13,10 @@ Rails.application.routes.draw do
   }
 
   root to: 'resumes#index'
-  get 'resumes/speaker_check_mail'
+  get 'speaker_accounts/show'
+  resources :resumes do
+    collection do
+      get 'resumes/speaker_check_mail'
+    end
+  end
 end

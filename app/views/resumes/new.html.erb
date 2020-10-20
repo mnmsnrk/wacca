@@ -1,0 +1,119 @@
+<%= render "layouts/shared/header" %>
+
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">プロフィール内容を入力</h2>
+    
+    <%= form_with model: @resume,url: resumes_path,local: true do |f| %> 
+    <%= render 'layouts/shared/error_messages', model: f.object %>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        プロフィール写真
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+         <%= f.file_field :image, id:"item-image" %> 
+        <div id="image-list"></div>
+      </div>
+    </div>
+    <%# /出品画像 %>
+
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+       <%# <div class="weight-bold-text">
+        名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :introduction, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>  
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          自己紹介
+          <span class="indispensable">必須</span>
+        </div>
+         <%= f.text_area :introduction, class:"items-text", id:"item-info", placeholder:"自己紹介（必須 1,000文字まで）（講演内容や今までの実績など）例）2010年7月から今まで300回以上メイクアップ教室を開いてきました。" ,rows:"7" ,maxlength:"1000" %> 
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">カテゴリーの選択</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          講演内容のジャンル
+          <span class="indispensable">必須</span>
+        </div>
+         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
+        <div class="weight-bold-text">
+          主な活動地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %> 
+    </div>
+    <%# /商品の詳細 %>
+
+    <%# 販売価格 %>
+    <div class="sell-price">
+      <div class="weight-bold-text question-text">
+        <span>講演金額<br>(¥300〜9,999,999)</span>
+      </div>
+      <div class="prise-set">
+        <div class="price-content">
+          <div class="price-text">
+            <span>価格</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <span class="sell-yen">¥</span>
+          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %> 
+        </div>
+
+        <div class="price-content">
+          <span>販売手数料 (10%)</span>
+          <span>
+            <span id='add-tax-price'>
+            </span>円
+          </span>
+        </div>
+        <div class="price-content">
+          <span>販売利益</span>
+          <span>
+            <span id='profit'></span>円
+        </div>
+        </span>
+      </div>
+    </div>
+    <%# /販売価格 %>
+
+    <%# 注意書き %>
+    <div class="caution">
+      <p class="sentence">
+        <a href="#">禁止されている内容、</a>
+        <a href="#">行為</a>
+        を必ずご確認ください。
+      </p>
+      <p class="sentence">
+        またブランド品でシリアルナンバー等がある場合はご記載ください。
+        <a href="#">偽ブランドの販売</a>
+        は犯罪であり処罰される可能性があります。
+      </p>
+      <p class="sentence">
+        また、出品をもちまして
+        <a href="#">加盟店規約</a>
+        に同意したことになります。
+      </p>
+    </div>
+    <%# /注意書き %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+       <%= f.submit "出品する" ,class:"sell-btn" %> 
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %> 
+</div>
