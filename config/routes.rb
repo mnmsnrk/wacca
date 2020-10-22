@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   }
 
   root to: 'resumes#index'
-  get 'messages/show'
   get 'speaker_accounts/show'
   resources :resumes do
     collection do
