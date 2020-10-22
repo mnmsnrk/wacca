@@ -19,7 +19,13 @@
           </li>
           <li class="list">
             <div class='resume-img-content'>
-              <%= link_to image_tag("education-eraser-ruler-pencil.png", class: 'icon-img'), edit_resume_path(@resume.id) %>
+            <ul>
+              <% if @resume.id.present? %>
+                  <%= link_to image_tag("education-eraser-ruler-pencil.png", class: 'icon-img'), edit_resume_path(@resume.id) %>
+              <% else %>
+                  <%= link_to image_tag("education-eraser-ruler-pencil.png", class: 'icon-img'), new_resume_path %>
+              <%end%>
+            </ul>           
             </div>
           </li>
         </ul>
