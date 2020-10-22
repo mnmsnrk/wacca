@@ -4,8 +4,8 @@
   <div class="items-sell-main">
     <h2 class="items-sell-title">プロフィール内容を入力</h2>
     
-    <%= form_with model: @resume,url: resumes_path,local: true do |f| %> 
-    <%= render 'layouts/shared/error_messages', model: f.object %>
+     <%= form_with(model: @resume,local: true)do |f| %> 
+     <%= render 'layouts/shared/error_messages', model: f.object %> 
 
     <%# 出品画像 %>
     <div class="img-upload">

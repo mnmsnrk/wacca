@@ -1,11 +1,7 @@
 class SpeakerAccountsController < ApplicationController
-  before_action :authenticate_speaker!
-
-  # def index
-  #   @speaker = Speaker.all
-  # end
 
   def show
+    @resume = Resume.find_by(params[:id])
     @speaker = Speaker.find(params[:id])
   end
 end
