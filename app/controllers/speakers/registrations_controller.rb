@@ -57,6 +57,6 @@ class Speakers::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up for inactive accounts.
     def after_inactive_sign_up_path_for(resource)
-      resumes_speaker_check_mail_path
+      resumes_speaker_check_mail_resumes_path
     end
 end
