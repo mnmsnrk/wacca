@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
   before_action :resume_set, only: [:edit, :show,:update,:destroy]
+  before_action :authenticate_speaker! 
 
   def index
       @resumes= Resume.all.order("id DESC")
@@ -20,6 +21,18 @@ class ResumesController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    @resume.update(resume_params)
+    if @resume.save
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private

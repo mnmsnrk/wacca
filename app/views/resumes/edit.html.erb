@@ -2,9 +2,9 @@
 
 <div class="items-sell-contents">
   <div class="items-sell-main">
-    <h2 class="items-sell-title">プロフィール内容を入力</h2>
+    <h2 class="items-sell-title">プロフィール内容を編集</h2>
     
-    <%= form_with model: @resume,url: resumes_path,local: true do |f| %> 
+    <%= form_with model: @resume,local: true do |f| %> 
     <%= render 'layouts/shared/error_messages', model: f.object %>
 
     <%# 出品画像 %>
@@ -58,7 +58,7 @@
 
     <%# 販売価格 %>
     <div class="sell-price">
-      <div class="weight-bold-text question-text">
+      <div class="weight-bold-text">
         講演金額
       </div>
       <div class="prise-set">

@@ -1,3 +1,30 @@
 <%= render "layouts/shared/header" %>
 
-z
+ <div class="resume">
+  <ul class='resume-lists'>
+    <li class="list">
+      <div class='resume-img-content'>
+       <%= image_tag "calendar (1).png", class: 'icon-img' %>
+      </div>
+    </li>
+    <li class="list">
+      <div class='resume-img-content'>
+        <%= image_tag "ecommerce-wallet.png", class: 'icon-img' %>
+      </div>
+    </li>
+    <li class="list">
+      <div class='resume-img-content'>
+        <%= image_tag "survey-chat.png", class: 'icon-img' %>
+      </div>
+    </li>
+    <li class="list">
+      <div class='resume-img-content'>
+      <% if @resume.id.present? %>
+          <%= link_to image_tag("education-eraser-ruler-pencil.png",class:'icon-img'), edit_resume_path(@resume.id)%> 
+      <% else %>
+          <%= link_to image_tag("education-eraser-ruler-pencil.png",class:'icon-img'), new_resume_path %> 
+      <%end%>
+      </div>
+    </li>
+  </ul>
+</div>
