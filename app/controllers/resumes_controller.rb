@@ -1,7 +1,7 @@
 class ResumesController < ApplicationController
   before_action :resume_set, only: [:edit, :show,:update,:destroy]
   before_action :authenticate_speaker! 
-
+  
   def index
       @resumes= Resume.all.order("id DESC")
   end
@@ -36,7 +36,7 @@ class ResumesController < ApplicationController
   end
 
   private
-  
+
   def resume_params
     params.require(:resume).permit(:introduction,:image,:category_id,:prefecture_id,:price).merge(user_id: current_speaker.id)
   end

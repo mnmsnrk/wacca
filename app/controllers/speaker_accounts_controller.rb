@@ -1,5 +1,4 @@
 class SpeakerAccountsController < ApplicationController
-  before_action :authenticate_speaker!
 
   def show
     @resume = Resume.find_by(params[:id])
