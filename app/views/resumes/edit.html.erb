@@ -4,8 +4,8 @@
   <div class="items-sell-main">
     <h2 class="items-sell-title">プロフィール内容を編集</h2>
     
-     <%= form_with(model: @resume,local: true)do |f| %> 
-     <%= render 'layouts/shared/error_messages', model: f.object %> 
+    <%= form_with model: @resume,local: true do |f| %> 
+    <%= render 'layouts/shared/error_messages', model: f.object %>
 
     <%# 出品画像 %>
     <div class="img-upload">
@@ -42,7 +42,6 @@
 
     <%# 商品の詳細 %>
     <div class="items-detail">
-      <div class="weight-bold-text">カテゴリーの選択</div>
       <div class="form">
         <div class="weight-bold-text">
           講演内容のジャンル
@@ -59,8 +58,8 @@
 
     <%# 販売価格 %>
     <div class="sell-price">
-      <div class="weight-bold-text question-text">
-        <span>講演金額<br>(¥1000〜9,999,999)</span>
+      <div class="weight-bold-text">
+        講演金額
       </div>
       <div class="prise-set">
         <div class="price-content">

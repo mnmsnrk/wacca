@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   }
 
   root to: 'resumes#index'
-  resources :speaker_accounts, only: [:show]
+  get 'speaker_accounts/show'
+  resources :rooms
+  resources :messages
   resources :resumes do
     collection do
       get 'resumes/speaker_check_mail'
