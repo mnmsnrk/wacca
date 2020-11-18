@@ -21,12 +21,12 @@
 
 <img width="1439" alt="スクリーンショット 2020-11-18 16 06 16" src="https://user-images.githubusercontent.com/69619645/99496961-86f73000-29b8-11eb-95fc-c51a3607a441.png">
 
+<img width="1440" alt="スクリーンショット 2020-11-18 16 06 53" src="https://user-images.githubusercontent.com/69619645/99497077-b73ece80-29b8-11eb-9748-f7b4380bed7c.png">
+
 <img width="1440" alt="スクリーンショット 2020-11-18 16 07 04" src="https://user-images.githubusercontent.com/69619645/99497116-c887db00-29b8-11eb-8323-ae20e43bb335.png">
 
-<img width="1440" alt="スクリーンショット 2020-11-18 16 07 15" src="https://user-images.githubusercontent.com/69619645/99497038-a7bf8580-29b8-11eb-8cad-5e6aa5141af0.png">
-
 ### マイページ
-<img width="1440" alt="スクリーンショット 2020-11-18 16 06 53" src="https://user-images.githubusercontent.com/69619645/99497077-b73ece80-29b8-11eb-9748-f7b4380bed7c.png">
+<img width="1440" alt="スクリーンショット 2020-11-18 16 07 15" src="https://user-images.githubusercontent.com/69619645/99497038-a7bf8580-29b8-11eb-8cad-5e6aa5141af0.png">
 
 ### メール認証後ページ
 <img width="1437" alt="スクリーンショット 2020-11-18 16 14 38" src="https://user-images.githubusercontent.com/69619645/99497389-346a4380-29b9-11eb-9c2b-120de3b79c2c.png">
