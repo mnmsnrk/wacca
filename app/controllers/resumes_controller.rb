@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   before_action :resume_set, only: [:edit, :show,:update,:destroy]
-  before_action :authenticate_speaker! 
+  before_action :authenticate_speaker!,only: [:edit, :show,:update,:destroy]
   
   def index
       @resumes= Resume.all.order("id DESC")
