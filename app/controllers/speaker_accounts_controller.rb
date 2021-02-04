@@ -4,4 +4,5 @@ class SpeakerAccountsController < ApplicationController
     @resume = Resume.find_by(params[:id])
     @speaker = Speaker.find_by(params[:id])
   end
+  
 end

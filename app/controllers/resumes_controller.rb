@@ -47,4 +47,6 @@ class ResumesController < ApplicationController
     @speaker = Speaker.find_by(id: @resume.user_id)
   end
 
+  
+
 end
