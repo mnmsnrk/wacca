@@ -57,3 +57,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'rails-i18n'
 gem 'active_hash'
+
+group :production do
+  gem 'rails_12factor'
+end

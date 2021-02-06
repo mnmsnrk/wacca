@@ -18,7 +18,7 @@
       <%=image_tag "undraw_fireworks_q5ji.png",class:"welcome-image"%>
       <ul class="move_to">
         <li><%= link_to 'トップページへ',root_path , class: "move" %></li>
-        <li><%= link_to 'マイページへ', "#",class: "move" %></li>
+        <li><%= link_to 'マイページへ', speaker_accounts_show_path(current_speaker.id),class: "move" %></li>
       </ul>
     </div>
   </div>

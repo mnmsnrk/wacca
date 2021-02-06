@@ -12,7 +12,6 @@
 .item-box {
   background-color: #FFF;
   width: 70vw;
-  min-width: 1200px;
   padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
@@ -75,13 +74,14 @@
 
 .item-explain-box {
   font-size: 18px;
+  width:50%;
   margin: 40px 0px;
   width:50%;
 }
 
 .detail-table {
   margin-bottom: 30px;
-  width: 50%;
+  width: 100%;
 }
 
 .detail-item {
